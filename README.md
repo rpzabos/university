@@ -13,4 +13,4 @@ Erre viszont ügyeljetek, hogy nagyjából egyenlően vegyétek ki a részetek a
 
 ## Git használat
 
-A projektek során használjatok Git-et és a legvégén egy GitHub vagy GitLab stb. linket kérünk tőletek, ha kész a projekt. Kérünk titeket, hogy rendszeresen commit-oljatok, ezzel még jobban láthatóvá téve, hogy ki mennyit dolgozott a projekten.
+A projektek során használjatok Git-et és a legvégén egy GitHub linket kérünk tőletek, ha kész a projekt. Kérünk titeket, hogy rendszeresen commit-oljatok, ezzel még jobban láthatóvá téve, hogy ki mennyit dolgozott a projekten.
