@@ -2,17 +2,27 @@
 
 > Egy autószerelő műhelyben működő kliens - szerver alkalmazás implementálása.
 - Git repo
-    - Rendszeres commit minden csapattagtól
+    - A fejlesztők a commit-jaik alapján lesznek értékelve. Rendszeres kód-commit szükséges minden csapattagtól
 - Egy solution használata
 - Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
-    - A package is bereferálható, de a warning-okat ki kell javítani ezesetben
+    - A package is bereferálható, a warning-okat is ki kell javítani
 
 ## Munka felvevő kliens - .NET WPF vagy Blazor frontend
 
-> Az ügyintéző irodájában működik.
+> Az ügyintéző irodájában működik, az érkező ügyfelek adatait tudja kezelni
 
-### Az érkező ügyfelek adatait tudja felvenni
+### Felhasználói felület, ahol az ügyintéző kezeli a felvett munkákat
+- Az adatok táblázatos formában jelenjenek meg
+- Indításkor betölti a korábbi adatokat is
+- Adattábla frissítésére alkalmas gomb
+- A sorok a különböző kategóriák szerint rendezhetőek növekvő vagy csökkenő sorrend (dátum, abc)
+- Keresés lehetőség az összes attribútum alapján
+- Munkaóra esztimáció megjelenítése (API számolja)
+- Egy kiválasztott munka adatait
+    - Meg tudja nézni
+    - Módosítani tudja
 
+### Szükséges adatok és azok validálása:
 - Ügyfél neve
     - Validáció
         - Nem lehet: üres, whitespace, különleges karakterek szűrése pl !?_-:;#
@@ -36,25 +46,12 @@
         - Kötelező mező
         - 1 és 10 közötti érték
 - UNIT tesztek az input validációra
-
-### Látja a felvett munkákat
-
-- Az adatok táblázatos formában megjelenítve
-- Indításkor betölti a korábbi adatokat
-- Adatok frissítésére alkalmas gomb
-- A sorok a különböző kategóriák szerint rendezhetőek növekvő vagy csökkenő sorrend (dátum, abc)
-- Keresés lehetőség az összes attribútum alapján
-- Munkaóra esztimáció megjelenítése (API számolja)
-- Egy kiválasztott munka adatait
-    - Meg tudja nézni
-    - Módosítani tudja
-
+    - Adott bemeneti értékekhez megfelelő értéket adnak vissza a metódusok
 ## Autószerelő kliens - .NET WPF vagy Blazor frontend
 
-> Az autószerelő műhelyben működik.
+> Az autószerelő műhelyben működik, látja a felvett munkákat
 
-### Látja a felvett munkákat
-
+### Felhasználói felület, ahol az ügyintéző látja a felvett munkákat
 - Az adatok táblázatos formában megjelenítve
 - Indításkor betölti a korábbi adatokat
 - Adatok frissítésére alkalmas gomb
@@ -89,4 +86,4 @@
         - 10: 1
     - Képlet: kategória * kor * hiba súlyossága
 - Validáció szükséges backend oldalon is
-- UNIT teszt a munkaóra esztimációra
+- UNIT tesztek a munkaóra esztimációra
