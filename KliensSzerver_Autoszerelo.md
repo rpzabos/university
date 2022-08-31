@@ -1,11 +1,15 @@
 # Autószereló munkanyilvántartó
 
-> Egy autószerelő műhelyben működő kliens - szerver alkalmazás implementálása.
-- Git repo
-    - A fejlesztők a commit-jaik alapján lesznek értékelve. Rendszeres kód-commit szükséges minden csapattagtól
+## Egy autószerelő műhelyben működő kliens - szerver alkalmazás implementálása.
+
+## Alapkövetelmények
+> Ezek hiányában a feladat értékelhetetlennek minősül
+
+- Git repo használata
+    - Rendszeres commit minden csapattagtól. A csapattagok a commit-jaik alapján lesznek értékelve.
 - Egy solution használata
 - Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
-    - A package is bereferálható, a warning-okat is ki kell javítani
+    - Java, Python stílusú elnvezések negatívan hatnak az értékelésre
 
 ## Munka felvevő kliens - .NET WPF vagy Blazor frontend
 
@@ -66,7 +70,8 @@
 
 ### Tárolja és szolgáltatja a bevitt adatokat
 
-- Adatbázis (EF Core), DB engine szabadon választható
+- Adatbázis, DB engine szabadon választható (MSSQL, Postgre, stb) 
+- Entity FWK használata (Tegyük lehetővé a reprodukálhatóságot)
 - Munkaóra esztimáció
     - Átlagos munkaóra kategóriákra lebontva
         - Karosszéria = 3 óra
