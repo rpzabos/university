@@ -31,8 +31,7 @@
     2. Ha van találat akkor már a mellette lévő mezőket lövi
          - UNIT tesztet írni a logikához (randomhoz nem muszáj)
 - A játék során végig a játékos tábláját látjuk, de az AI lépései, választási stratégiája is látható legyen (ne legyen villámgyors, követhetetlen)
-- Opcionális: Egyedi AI stratégia implementálása ami hatékonyabb a fent leírtnál.
-- Opcionális: Egy játék teljes menetének a mentése és visszajátszhatósága.
+- Egy játék teljes menetének a mentése és visszajátszhatósága. A játékfelületen végignézhető adott játék minden lépése.
 
 ### Játékmenet
 
@@ -49,5 +48,8 @@
 
 ### Játék vége
 
-- Tárolja le az eredményeket adatbázisban, a DB engine szabadon választható (MSSQL, Postgre, stb) 
+- Tárolja le az eredményeket 
+    - Lehetőségek:
+        - Adatbázisban, a DB engine szabadon választható (MSSQL, Postgre, stb) 
+        - Adat fájlban JSON, XML, stb
 - Entity FWK használata (Tegyük lehetővé a reprodukálhatóságot)
