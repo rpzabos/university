@@ -1,48 +1,49 @@
 # Orvos - asszisztens
 
-## Egy orvosi rendelőben működő kliens - szerver alkalmazás implementálása.
-
-## Alapkövetelmények
-> Ezek hiányában a feladat értékelhetetlennek minősül
-
-- Git repo használata
-    - Rendszeres commit minden csapattagtól. A csapattagok a commit-jaik alapján lesznek értékelve.
-- Egy solution használata
-- Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
-    - Java, Python stílusú elnvezések negatívan hatnak az értékelésre
+> Egy orvosi rendelőben működő kliens - szerver alkalmazás implementálása.
 
 ## Asszisztens kliens - .NET WPF vagy Blazor frontend
 
-> Az asszisztens kezelőfelülete, az érkező betegek adatait tudja rögzíteni
+> A asszisztens pultján működik.
 
-Szükséges adatok és egyéb feltételek:
+### Az érkező betegeket tudja rögzíteni
+
 - Név
     - Validáció
         - Nem lehet: üres, whitespace, különleges karakterek szűrése pl !?_-:;#
-    - UNIT tesztek a validáló fv-re (Adott bemenetre megfelelő kimenetek ellnőrzése)
+    - UNIT teszt a validáló fv-re
 - Lakcím
 - Tajszám `Formátum: 000 000 000`
     - Validáció
         - Formátumra és hogy csak számokat tartalmaz
-    - UNIT tesztek a validáló fv-re
+    - UNIT teszt a validáló fv-re
 - Panasz rövid leírása (kötelező mezó = nem lehet üres)
 
 ## Orvos kliens - .NET WPF vagy Blazor frontend
 
-> A orvos irodájában működik, Látja a felvett betegek listáját
+> A orvos irodájában működik.
 
-Szükséges adatok és egyéb feltételek:
-- Időrendi sorrendben rendezve dátum és idő szerint 
-    - Note: A az adatok felvételének a sorrendje nem számít dátum szerinti rendezettségnek
+### Látja a felvett betegek listáját
+
+- Időrendi sorrendben rendezve dátum és idő szerint
 - Ki tud választani egy beteget
-    - Látja az adatait, tudja módosítani
-    - Diagnózis felvétele
-    - Tudja törölni az adott sort
+    - Látja az adatait
+    - Tudja módosítani
+        - Diagnózis felvétele
+    - Tudja törölni
+
 ## Szerver - .NET WEB API alkalmazás (önálló konzol alkalmazás)
 
-### Kezeli és szolgáltatja az adatokat
+### Tárolja és szolgáltatja a bevitt adatokat
 
-- Adatok tárolása: Adatbázis, a DB engine szabadon választható(MSSQL, Postgre, stb) 
-- Entity FWK használata (Tegyük lehetővé a reprodukálhatóságot)
+- Adatok tárolása: JSON, XML vagy adatbázis(Entity FWK)
 - Indításkor betölti a korábbi adatokat
 
+## Egyéb követelmények
+
+- Git repo
+    - Rendszeres commit minden csapattagtól
+- Egy solution használata
+- Egy haladó technológia használata a felsoroltak közül (Entity FWK, Blazor, Async, MVVM)
+- Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
+    - Java, Python stílusú elnvezéseket ne használjatok
