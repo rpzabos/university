@@ -6,27 +6,41 @@
 
 [Magyar](https://hu.wikipedia.org/wiki/Torped%C3%B3_(j%C3%A1t%C3%A9k))
 
+## Alapkövetelmények
+> Ezek hiányában a feladat értékelhetetlennek minősül
+
+- Git repo használata
+    - Rendszeres commit minden csapattagtól. A csapattagok a commit-jaik alapján lesznek értékelve.
+- Egy solution használata
+- Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
+    - Java, Python stílusú elnvezések negatívan hatnak az értékelésre
+
 ## Követelmények
 
 ### Egymás ellen lehessen játszani ugyanazon a gépen, ugyanabban az alkalmazásban
 
-- Két játékos nevet kér be
-- A soron kövezkező játékos csak a saját játékmezőjét látja (életszerű helyzet szimulálása)
+- Kezdőképernyő: Két játékos nevet kér be
+- A játék során adott játékos nem láthatja az ellenfele lépéseit, hajóit. Ennek kiküszöbölésére egy egyedi megoldás implementálása (életszerű helyzet szimulálása)
 
 ### AI ellen lehessen játszani
 
-- Egy játékos nevet kér be
+- Kezdőképernyő: Egy játékos nevet kér be
 - Kezdő játékos véletlenszerűen választva
 - AI elemezési sorrend
     1. Random találgat
     2. Ha van találat akkor már a mellette lévő mezőket lövi
          - UNIT tesztet írni a logikához (randomhoz nem muszáj)
+- A játék során végig a játékos tábláját látjuk, de az AI lépései, választási stratégiája is látható legyen (ne legyen villámgyors, követhetetlen)
+- Opcionális: Egyedi AI stratégia implementálása ami hatékonyabb a fent leírtnál.
+- Opcionális: Egy játék teljes menetének a mentése és visszajátszhatósága.
 
 ### Játékmenet
 
-- Belépéskor kérjen nevet, majd ahhoz mentse az eredményeket
+- Belépéskor kérjen neve(ke)t, majd a játék végén ahhoz mentse az eredményeket
     - Név nem lehet: üres, whitespace, különleges karakterek szűrése pl !?_-:;#
-- Eredményjelző
+- A kezdőképernyőn egy gomb segítségével betölthető legyen a mindenkori eredménylista a tárolt adatokból
+    - Listázza az egyes korábbi menetek adatai táblázatban (játékosok, körök száma, játékosok találatai, nyertes)
+- A játék közben látható eredményjelző adatai:
     - Körök száma
     - Saját találatok
     - Ellenfél találatai
@@ -35,16 +49,5 @@
 
 ### Játék vége
 
-- Tárolja le az eredményeket
-    - Adatok tárolása: JSON, XML vagy adatbázis(Entity FWK)
-- Mindenkori eredménylista beolvasva tárolt adatokból
-    - Listázza az egyes korábbi menetek adatai táblázatban (játékosok, körök száma, játékosok találatai, nyertes)
-
-### Egyéb követelmények
-
-- Git repo
-    - Rendszeres commit minden csapattagtól
-- Egy solution használata
-- Egy haladó technológia használata a felsoroltak közül (Entity FWK, Blazor, Async, MVVM)
-- Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
-    - Java, Python stílusú elnvezéseket ne használjatok
+- Tárolja le az eredményeket adatbázisban, a DB engine szabadon választható (MSSQL, Postgre, stb) 
+- Entity FWK használata (Tegyük lehetővé a reprodukálhatóságot)
