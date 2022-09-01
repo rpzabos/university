@@ -1,6 +1,10 @@
 # Autószereló munkanyilvántartó
 
-> Egy autószerelő műhelyben működő kliens - szerver alkalmazás implementálása.
+## Egy autószerelő műhelyben működő kliens - szerver alkalmazás implementálása.
+
+### Alapkövetelmények
+> Ezek hiányában a feladat értékelhetetlennek minősül
+
 - Git repo
     - Rendszeres commit minden csapattagtól
 - Egy solution használata
@@ -89,4 +93,4 @@
         - 10: 1
     - Képlet: kategória * kor * hiba súlyossága
 - Validáció szükséges backend oldalon is
-- UNIT teszt a munkaóra esztimációra
+- UNIT tesztek a munkaóra esztimációra
