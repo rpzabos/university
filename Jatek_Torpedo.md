@@ -13,7 +13,7 @@
     - Rendszeres commit minden csapattagtól. A csapattagok a commit-jaik alapján lesznek értékelve.
 - Egy solution használata
 - Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
-    - Java, Python stílusú elnvezések negatívan hatnak az értékelésre
+    - A package is bereferálható, de a warning-okat ki kell javítani ezesetben
 
 ## Követelmények
 
@@ -29,7 +29,7 @@
 - AI elemezési sorrend
     1. Random találgat
     2. Ha van találat akkor már a mellette lévő mezőket lövi
-         - UNIT tesztet írni a logikához (randomhoz nem muszáj)
+         - UNIT teszteket írni a logikához
 - A játék során végig a játékos tábláját látjuk, de az AI lépései, választási stratégiája is látható legyen (ne legyen villámgyors, követhetetlen)
 - Egy játék teljes menetének a mentése és visszajátszhatósága. A játékfelületen végignézhető adott játék minden lépése.
 
@@ -50,6 +50,5 @@
 
 - Tárolja le az eredményeket 
     - Lehetőségek:
-        - Adatbázisban, a DB engine szabadon választható (MSSQL, Postgre, stb) 
+        - Adatbázisban (Entity Framework), a DB engine szabadon választható (MSSQL, Postgre, stb) 
         - Adat fájlban JSON, XML, stb
-- Entity FWK használata (Tegyük lehetővé a reprodukálhatóságot)

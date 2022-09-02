@@ -73,7 +73,7 @@
 
 ### Tárolja és szolgáltatja a bevitt adatokat
 
-- Adatbázis (Entity Framework), relációs DB engine szabadon választható
+- Adatbázis (Entity Framework), relációs DB engine szabadon választható (MSSQL, Postgre, stb) 
 - Munkaóra esztimáció
     - Átlagos munkaóra kategóriákra lebontva
         - Karosszéria = 3 óra

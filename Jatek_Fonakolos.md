@@ -15,7 +15,7 @@
   - Rendszeres commit minden csapattagtól
 - Egy solution használata
 - Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
-  - Java, Python stílusú elnvezéseket ne használjatok
+  - A package is bereferálható, de a warning-okat ki kell javítani ezesetben
 
 ## Követelmények
 
@@ -56,6 +56,6 @@
 ### Játék vége
 
 - Tárolja le az eredményeket
-  - Adatok tárolása: JSON, XML vagy adatbázis(Entity FWK)
+  - Adatok tárolása: JSON, XML vagy adatbázis(Entity Framework)
 - Mindenkori eredménylista beolvasva tárolt adatokból
   - Listázza és rendezze az egyes korábbi menetek adatai táblázatban (játékosok, játékosok pontjai, nyertes, eltelt idő). A rendezés alapja a pontszám legyen, hogy egy Highscore táblát kapjunk

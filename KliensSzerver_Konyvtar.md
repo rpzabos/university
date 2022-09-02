@@ -9,7 +9,8 @@
     - Rendszeres commit minden csapattagtól. A csapattagok a commit-jaik alapján lesznek értékelve.
 - Egy solution használata
 - Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
-    - Java, Python stílusú elnvezések negatívan hatnak az értékelésre
+    - A package is bereferálható, de a warning-okat ki kell javítani ezesetben
+
 ## Könyvtáros kliens - .NET WPF vagy Blazor frontent
 
 > A könyvtáros pultján működik, látja a könyvtárban lévő könyvek listáját
@@ -19,7 +20,7 @@
     - Új tagot tud hozzáadni
     - Meg tudja nézni a tagok adatait
         - Látja a kikölcsönzött könyveket
-        - Legyen kiemelve ha egy könyv nem lett visszaadva időben  
+        - Legyen kiemelve, ha egy könyv nem lett visszaadva időben  
 - A könyvek táblázatos formában jelennek meg
     - Adott állapot lekérdezése könyvenként
         - Bent van vagy ki van kölcsönözve
@@ -50,7 +51,7 @@
 
 - Könyvtárban lévő könyvekkel kapcsolatos műveletek (cím, esetleg darabszám, stb.)
 - Kölcsönzött könyvek kezelése
-- Tárolja le az adatokat adatbázisban, a DB engine szabadon választható (MSSQL, Postgre, stb) 
+- Tárolja le az adatokat adatbázisban (Entity Framework), a DB engine szabadon választható (MSSQL, Postgre, stb) 
     - Könyvek adatai
         - Cím
         - Szerző
@@ -60,7 +61,6 @@
     - Könyvtár tagok adatai
         - Név
             - Nem lehet: üres, whitespace, különleges karakterek szűrése pl !?_-:;#
-            - UNIT tesztek a validáló fv-re
         - Lakcím
         - Olvasószám
         - Születési dátum
@@ -70,5 +70,4 @@
         - Kölcsönzés ideje
         - Visszahozás határideje
             - Csak későbbi dátum lehet mint a kölcsönzés ideje (DateTime típus használata)
-            - UNIT tesztek a validáló fv-re
-- Entity FWK használata (Tegyük lehetővé a reprodukálhatóságot)
+    - UNIT tesztek a validációs logikára
