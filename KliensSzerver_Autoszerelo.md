@@ -47,7 +47,7 @@
 - Indításkor betölti a korábbi adatokat
 - Adatok frissítésére alkalmas gomb
 - A sorok a különböző kategóriák szerint rendezhetőek növekvő vagy csökkenő sorrend (dátum, abc)
-- Keresés lehetőség az összes attribútum alapján
+- Keresés lehetőség az összes attribútum alapján. Validáció is szükséges az input mezőkre.
 - Munkaóra esztimáció megjelenítése (API számolja)
 - Egy kiválasztott munka adatait
     - Meg tudja nézni
@@ -73,7 +73,7 @@
 
 ### Tárolja és szolgáltatja a bevitt adatokat
 
-- Adatbázis (EF Core), DB engine szabadon választható
+- Adatbázis (Entity Framework), relációs DB engine szabadon választható
 - Munkaóra esztimáció
     - Átlagos munkaóra kategóriákra lebontva
         - Karosszéria = 3 óra
