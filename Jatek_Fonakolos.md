@@ -7,6 +7,16 @@
 [Magyar](https://hu.wikipedia.org/wiki/Fon%C3%A1kol%C3%B3s) \
 [Angol](https://en.wikipedia.org/wiki/Reversi)
 
+## Alapkövetelmények
+
+> Ezek hiányában a feladat értékelhetetlennek minősül
+
+- Git repo
+  - Rendszeres commit minden csapattagtól
+- Egy solution használata
+- Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
+  - Java, Python stílusú elnvezéseket ne használjatok
+
 ## Követelmények
 
 ### Egymás ellen lehessen játszani ugyanazon a gépen, ugyanabban az alkalmazásban
@@ -18,18 +28,19 @@
 - Egy játékos nevet kér be
 - Kezdő játékos véletlenszerűen választva
 - AI elemzés
-    - Először oda rakjon korongot, ahol a legtöbbet változtatja át
-        - UNIT tesztet írni hozzá pár bemenetre
-    - Véletlenszerűen helyezzen le egy korongot
+  - Először oda rakjon korongot, ahol a legtöbbet változtatja át
+  - Ha több egyforma lehetőség van, akkor véletlenszerűen válasszon egyet
+  - UNIT teszteket írni az AI-hoz néhány bemenetre (legalább 3 különböző lépés)
 
 ### Játékmenet
 
 - Belépéskor kérjen nevet, majd ahhoz mentse a pontszámokat
-    - Név nem lehet: üres, whitespace, különleges karakterek szűrése pl !?_-:;#
+  - Név nem lehet: üres, whitespace, különleges karakterek szűrése pl !?_-:;#
 - Eredményjelző
-    - Saját pontok
-    - AI/Második játékos pontok
-    - Eltelt idő
+  - Saját pontok
+  - AI/Második játékos pontok
+  - Eltelt idő
+  - Az aktuális játékos legyen kiemelve (akinek lépnie kell)
 
 ### Pontszámítás
 
@@ -40,20 +51,11 @@
   - A lépést követően, ha két tengelyt érintett változás (pl vízszintes és diagonális), akkor duplázzuk meg a körben számított pontokat. Ha mindhárom tengelyt érintette, akkor triplázzuk meg a pontokat (horizontális, vertikális, diagonális)
   - Ha a lépést követően az ellenfélnek nem marad korongja a pályán, akkor a győztes kapjon bónusz pontot a fentebb említettek mellé aminek értéke `100 * korong_érték * n`, ahol `n` az összes pályán lévő korong száma
   - Ha egy játékos passzol, `0` pontot kap abban a körben
-- A pontszámítás rendelkezzen unit tesztekkel
+- A pontszámítás rendelkezzen UNIT tesztekkel
 
 ### Játék vége
 
 - Tárolja le az eredményeket
-    - Adatok tárolása: JSON, XML vagy adatbázis(Entity FWK)
+  - Adatok tárolása: JSON, XML vagy adatbázis(Entity FWK)
 - Mindenkori eredménylista beolvasva tárolt adatokból
-    - Listázza és rendezze az egyes korábbi menetek adatai táblázatban (játékosok, játékosok pontjai, nyertes, eltelt idő). A rendezés alapja a pontszám legyen, hogy egy Highscore táblát kapjunk
-    
-### Egyéb követelmények
-
-- Git repo
-    - Rendszeres commit minden csapattagtól
-- Egy solution használata
-- Egy haladó technológia használata a felsoroltak közül (Entity FWK, Blazor, Async, MVVM)
-- Konvenciók alkalmazása: [NI C# Style Guide](https://github.com/ni/csharp-styleguide)
-    - Java, Python stílusú elnvezéseket ne használjatok
+  - Listázza és rendezze az egyes korábbi menetek adatai táblázatban (játékosok, játékosok pontjai, nyertes, eltelt idő). A rendezés alapja a pontszám legyen, hogy egy Highscore táblát kapjunk
